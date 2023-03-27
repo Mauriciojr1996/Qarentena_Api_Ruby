@@ -32,8 +32,23 @@
                                                                                
   Entao('retornar o usuario criado') do                                        
     expect(@request_users['ID']).to eql @request_users[:ID]
-    expect(@request_users['Password']).to eql @request_users[:UserName]
+    expect(@request_users['UserName']).to eql @request_users[:UserName]
     expect(@request_users['Password']).to eql @request_users[:Password]
     print @payload_users
-  end                                                                          
+  end 
+ 
+  Quando('faco uma requisição PUT para o serviço Users') do
+    @put_users = build(:user_put).user_put
+    @request_users = users.post_users(@put_users)
+  end
+  
+  Entao('retornar o usuario alterado') do
+    expect(@request_users['ID']).to eql @request_users[:ID]
+    expect(@request_users['Title']).to eql @request_users[:Title]
+    expect(@request_users['DueDate']).to eql @request_users[:DueDate]
+    expect(@request_users['Completed']).to eql @request_users[:Completed]
+    print @put_users
+    
+    
+  end 
   

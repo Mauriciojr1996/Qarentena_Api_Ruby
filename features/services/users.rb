@@ -16,5 +16,9 @@ module Rest
         def post_users(user)
             self.class.post('/api/v1/Activities', body: user.to_json)       
         end
+
+        def put_users(put_user)
+            self.class.post('/api/v1/Activities', body: put_user.to_json)
+        end
     end   
 end

@@ -22,6 +22,12 @@
   Entao o serviço Users deve responder com 200
   E retornar o usuario criado
 
+@put_user 
+ Cenario: Validar PUT API Users 
+  Quando faco uma requisição PUT para o serviço Users 
+  Entao o serviço Users deve responder com 200
+  E retornar o usuario alterado  
+
 
 
 
