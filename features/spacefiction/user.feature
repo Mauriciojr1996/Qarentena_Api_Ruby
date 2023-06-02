@@ -10,7 +10,7 @@
   Entao o serviço Users deve responder com 200
   E retornar a lista de usuarios
  
-@get_user 
+@get_user_id 
  Cenario: Validar GET API Users com id
   Quando faco uma requisição GET para o serviço Users passando id
   Entao o serviço Users deve responder com 200
